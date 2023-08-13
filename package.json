@@ -1,0 +1,13 @@
+{
+  "name": "ddubiman",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.5.0",
+    "electron-builder": "^24.6.3"
+  },
+  "scripts": {
+    "start": "electron ."
+  }
+}
