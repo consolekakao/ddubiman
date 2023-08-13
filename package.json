@@ -12,10 +12,11 @@
   },
   "scripts": {
     "dev": "vite",
-    "compile": "tsc && copyfiles -f index.html build",
+    "compile": "tsc && copyfiles -f index.html build && copyfiles -f preload.js build",
     "start": "vite & yarn compile && cross-env DEBUG=true electron ."
   },
   "dependencies": {
+    "@vitejs/plugin-react": "^4.0.4",
     "electron-is-dev": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
