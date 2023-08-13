@@ -1,4 +1,6 @@
 import { app, BrowserWindow } from "electron";
+import isDev from "electron-is-dev";
+import path from "path";
 
 let window;
 
@@ -12,5 +14,10 @@ app.on("ready", () => {
     },
   });
 
-  window.loadFile("index.html");
+  window.loadURL(
+    isDev
+      ? "http://localhost:5173"
+      : `file://${path.join(__dirname, "../build/index.html")}`
+  );
+  // window.loadFile("index.html");
 });
